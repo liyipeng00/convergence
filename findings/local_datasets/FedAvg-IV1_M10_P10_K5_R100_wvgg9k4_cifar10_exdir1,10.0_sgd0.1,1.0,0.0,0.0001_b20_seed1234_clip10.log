@@ -1,0 +1,1531 @@
+INFO:root:Namespace(m='wvgg9k4', d='cifar10', s=2, R=100, K=5, M=10, P=10, partition='exdir', alpha=[1, 10.0], optim='sgd', lr=0.1, lr_decay=1.0, momentum=0.0, weight_decay=0.0001, global_lr=1.0, batch_size=20, seed=1234, clip=10, log='Log', eval_num=100, tail_eval_num=0, device=0, save_model=0, start_round=0, case=1)
+INFO:root:record_name: FedAvg-IV1_M10_P10_K5_R100_wvgg9k4_cifar10_exdir1,10.0_sgd0.1,1.0,0.0,0.0001_b20_seed1234_clip10
+INFO:root:VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (9): ReLU(inplace=True)
+    (10): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (11): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (12): ReLU(inplace=True)
+    (13): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (14): ReLU(inplace=True)
+    (15): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (19): ReLU(inplace=True)
+    (20): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (classifier): Linear(in_features=256, out_features=10, bias=True)
+)
+INFO:root:selected clients: [7 2 9 1 0 8 4 5 6 3]
+INFO:root:{'total_norm': tensor(7.3283e-11, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0292, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0297, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0628, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0547, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0102, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0394, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0031, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0649, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0039, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 1's server1 train acc:  10.00%, train loss: 2.3126
+INFO:root:Round 1's server2 train acc:  10.00%, train loss: 2.3127
+INFO:root:Round 1's server  test  acc:   9.99%, test  loss: 2.3117
+INFO:root:selected clients: [7 1 9 5 8 4 3 0 2 6]
+INFO:root:{'total_norm': tensor(7.8803e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0132e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2416e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.8965e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.0627e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.4226e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.4596e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.7842e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.2136e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 2's server1 train acc:  10.00%, train loss: 2.3047
+INFO:root:Round 2's server2 train acc:  10.00%, train loss: 2.3048
+INFO:root:Round 2's server  test  acc:  10.00%, test  loss: 2.3034
+INFO:root:selected clients: [8 0 5 7 2 4 9 6 1 3]
+INFO:root:{'total_norm': tensor(2.9213e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.6906e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.1778e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0016, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.5816e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.2178e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0695e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.0945e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1951e-09, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 3's server1 train acc:  10.00%, train loss: 2.3088
+INFO:root:Round 3's server2 train acc:  10.00%, train loss: 2.3087
+INFO:root:Round 3's server  test  acc:  10.00%, test  loss: 2.3081
+INFO:root:selected clients: [7 2 3 8 6 1 0 9 4 5]
+INFO:root:{'total_norm': tensor(1.0856e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0007, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.8542e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.1692e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.8483e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.7586e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.1979e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1009e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.9188e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.9463e-05, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 4's server1 train acc:  10.00%, train loss: 2.3019
+INFO:root:Round 4's server2 train acc:  10.00%, train loss: 2.3019
+INFO:root:Round 4's server  test  acc:  10.00%, test  loss: 2.3008
+INFO:root:selected clients: [0 7 9 1 3 4 6 8 5 2]
+INFO:root:{'total_norm': tensor(3.0070e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.0624e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.9953e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.0837e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.8913e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.5527e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.5261e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1875e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0017, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 5's server1 train acc:  10.00%, train loss: 2.3053
+INFO:root:Round 5's server2 train acc:  10.00%, train loss: 2.3053
+INFO:root:Round 5's server  test  acc:  10.01%, test  loss: 2.3048
+INFO:root:selected clients: [8 4 0 5 1 2 6 3 7 9]
+INFO:root:{'total_norm': tensor(6.7089e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.0480e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.9801e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.2799e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.9108e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.6624e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.6632e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.4093e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.1519e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.4180e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 6's server1 train acc:  10.00%, train loss: 2.2997
+INFO:root:Round 6's server2 train acc:  10.00%, train loss: 2.2998
+INFO:root:Round 6's server  test  acc:  10.00%, test  loss: 2.2988
+INFO:root:selected clients: [5 3 6 0 8 2 1 9 4 7]
+INFO:root:{'total_norm': tensor(2.6514e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1370e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.1289e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1031e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.0563e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0008, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0334, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.2965e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1447e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0056e-05, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 7's server1 train acc:  10.00%, train loss: 2.3026
+INFO:root:Round 7's server2 train acc:  10.00%, train loss: 2.3026
+INFO:root:Round 7's server  test  acc:  10.04%, test  loss: 2.3022
+INFO:root:selected clients: [1 6 5 2 8 7 9 4 0 3]
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0010, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.6206e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.8468e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1125e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.2886e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.1628e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1935e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.9490e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.9160e-05, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 8's server1 train acc:  10.07%, train loss: 2.2981
+INFO:root:Round 8's server2 train acc:  10.10%, train loss: 2.2981
+INFO:root:Round 8's server  test  acc:  10.13%, test  loss: 2.2972
+INFO:root:selected clients: [4 5 0 6 1 8 3 7 9 2]
+INFO:root:{'total_norm': tensor(1.7580e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.4830e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.0153e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.9636e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.0584e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.5414e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.1057e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.7957e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0010, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 9's server1 train acc:   9.99%, train loss: 2.3002
+INFO:root:Round 9's server2 train acc:  10.00%, train loss: 2.3001
+INFO:root:Round 9's server  test  acc:  10.07%, test  loss: 2.2996
+INFO:root:selected clients: [8 2 6 4 3 9 7 0 1 5]
+INFO:root:{'total_norm': tensor(2.9443e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0969e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.8744e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.9509e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.0965e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.3930e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.7333e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.4797e-05, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 10's server1 train acc:  11.06%, train loss: 2.2963
+INFO:root:Round 10's server2 train acc:  11.09%, train loss: 2.2962
+INFO:root:Round 10's server  test  acc:  11.43%, test  loss: 2.2955
+INFO:root:selected clients: [2 6 0 8 5 4 9 1 7 3]
+INFO:root:{'total_norm': tensor(0.0004, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.3334e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.4608e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0004, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.0111e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9055e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.7820e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.7333e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.3817e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.3511e-09, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 11's server1 train acc:  10.14%, train loss: 2.2980
+INFO:root:Round 11's server2 train acc:  10.17%, train loss: 2.2979
+INFO:root:Round 11's server  test  acc:  10.84%, test  loss: 2.2974
+INFO:root:selected clients: [2 4 0 9 3 6 5 1 7 8]
+INFO:root:{'total_norm': tensor(9.0672e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.1592e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.5263e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.8859e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.7226e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.8319e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0554e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.3167e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.7768e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 12's server1 train acc:  14.22%, train loss: 2.2948
+INFO:root:Round 12's server2 train acc:  14.20%, train loss: 2.2948
+INFO:root:Round 12's server  test  acc:  14.42%, test  loss: 2.2939
+INFO:root:selected clients: [9 4 7 3 5 1 8 0 6 2]
+INFO:root:{'total_norm': tensor(2.4694e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.1226e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0026e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.4538e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.4856e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.1852e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.9434e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2149e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 13's server1 train acc:  12.10%, train loss: 2.2956
+INFO:root:Round 13's server2 train acc:  12.06%, train loss: 2.2956
+INFO:root:Round 13's server  test  acc:  14.17%, test  loss: 2.2950
+INFO:root:selected clients: [2 9 8 4 6 0 5 7 1 3]
+INFO:root:{'total_norm': tensor(2.4343e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.1154e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9782e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.4957e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.8460e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0061, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.0781e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0822e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.1780e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 14's server1 train acc:  16.65%, train loss: 2.2934
+INFO:root:Round 14's server2 train acc:  16.75%, train loss: 2.2934
+INFO:root:Round 14's server  test  acc:  17.06%, test  loss: 2.2927
+INFO:root:selected clients: [6 8 5 2 0 3 4 9 7 1]
+INFO:root:{'total_norm': tensor(1.0819e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0036, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.4012e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.5375e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.6954e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2950e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.0023e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.5174e-05, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 15's server1 train acc:  13.41%, train loss: 2.2939
+INFO:root:Round 15's server2 train acc:  13.40%, train loss: 2.2939
+INFO:root:Round 15's server  test  acc:  14.94%, test  loss: 2.2932
+INFO:root:selected clients: [2 5 8 7 9 0 6 4 3 1]
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.0097e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.8325e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.4414e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.9432e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.5912e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1727e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.1147e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 16's server1 train acc:  17.28%, train loss: 2.2917
+INFO:root:Round 16's server2 train acc:  17.19%, train loss: 2.2917
+INFO:root:Round 16's server  test  acc:  18.18%, test  loss: 2.2909
+INFO:root:selected clients: [0 8 9 1 3 7 6 5 2 4]
+INFO:root:{'total_norm': tensor(1.6055e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.9934e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.3522e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.5252e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.4621e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.1911e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.3990e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2788e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.3270e-05, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 17's server1 train acc:  14.96%, train loss: 2.2923
+INFO:root:Round 17's server2 train acc:  15.15%, train loss: 2.2922
+INFO:root:Round 17's server  test  acc:  16.07%, test  loss: 2.2914
+INFO:root:selected clients: [7 4 3 8 9 6 0 1 5 2]
+INFO:root:{'total_norm': tensor(0.0093, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.9327e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.9626e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.9431e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.3801e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9528e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.4456e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.9421e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.8734e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 18's server1 train acc:  18.83%, train loss: 2.2900
+INFO:root:Round 18's server2 train acc:  19.02%, train loss: 2.2901
+INFO:root:Round 18's server  test  acc:  20.08%, test  loss: 2.2889
+INFO:root:selected clients: [9 5 1 3 6 4 8 2 0 7]
+INFO:root:{'total_norm': tensor(2.7990e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.8322e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.5531e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.7906e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.2960e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.2102e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1667e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9156e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.0724e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 19's server1 train acc:  15.51%, train loss: 2.2902
+INFO:root:Round 19's server2 train acc:  15.47%, train loss: 2.2903
+INFO:root:Round 19's server  test  acc:  17.15%, test  loss: 2.2893
+INFO:root:selected clients: [3 4 2 5 8 6 7 0 9 1]
+INFO:root:{'total_norm': tensor(1.1320e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.0921e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.4794e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.3814e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.7093e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.3843e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.7120e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.2593e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.3619e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.9189e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 20's server1 train acc:  20.44%, train loss: 2.2882
+INFO:root:Round 20's server2 train acc:  20.47%, train loss: 2.2882
+INFO:root:Round 20's server  test  acc:  22.19%, test  loss: 2.2870
+INFO:root:selected clients: [4 7 9 8 6 2 5 3 0 1]
+INFO:root:{'total_norm': tensor(1.5613e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0748e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.3586e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.8264e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.7968e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.8445e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.5072e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0026, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.3291e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 21's server1 train acc:  15.88%, train loss: 2.2885
+INFO:root:Round 21's server2 train acc:  15.85%, train loss: 2.2885
+INFO:root:Round 21's server  test  acc:  17.40%, test  loss: 2.2872
+INFO:root:selected clients: [0 7 3 2 6 9 8 4 5 1]
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.9777e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.9766e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.4422e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.3510e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.6340e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.7467e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.0176e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.6955e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.9515e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 22's server1 train acc:  20.92%, train loss: 2.2866
+INFO:root:Round 22's server2 train acc:  21.12%, train loss: 2.2865
+INFO:root:Round 22's server  test  acc:  22.99%, test  loss: 2.2852
+INFO:root:selected clients: [4 0 7 5 8 2 9 3 1 6]
+INFO:root:{'total_norm': tensor(2.4909e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.6560e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.3341e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.6287e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.0891e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.3240e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.5466e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.4129e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.7257e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 23's server1 train acc:  16.74%, train loss: 2.2864
+INFO:root:Round 23's server2 train acc:  16.44%, train loss: 2.2866
+INFO:root:Round 23's server  test  acc:  17.96%, test  loss: 2.2851
+INFO:root:selected clients: [0 3 1 8 4 5 7 2 9 6]
+INFO:root:{'total_norm': tensor(5.6187e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.7176e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.3241e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.7184e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.7159e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.7029e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.6414e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.3303e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.5811e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 24's server1 train acc:  20.85%, train loss: 2.2843
+INFO:root:Round 24's server2 train acc:  20.81%, train loss: 2.2841
+INFO:root:Round 24's server  test  acc:  23.52%, test  loss: 2.2825
+INFO:root:selected clients: [6 1 7 4 8 3 9 5 2 0]
+INFO:root:{'total_norm': tensor(4.8080e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.4870e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.5620e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.9759e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.4155e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.4348e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.9096e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.0848e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.5801e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 25's server1 train acc:  16.31%, train loss: 2.2843
+INFO:root:Round 25's server2 train acc:  16.60%, train loss: 2.2844
+INFO:root:Round 25's server  test  acc:  18.03%, test  loss: 2.2828
+INFO:root:selected clients: [2 0 3 7 4 9 5 6 8 1]
+INFO:root:{'total_norm': tensor(7.3955e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0720e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.2351e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.8727e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0759e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.7176e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.0579e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.0743e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0321e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 26's server1 train acc:  21.08%, train loss: 2.2822
+INFO:root:Round 26's server2 train acc:  20.78%, train loss: 2.2822
+INFO:root:Round 26's server  test  acc:  23.38%, test  loss: 2.2804
+INFO:root:selected clients: [4 7 1 2 0 9 8 5 6 3]
+INFO:root:{'total_norm': tensor(6.5246e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1894e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.0885e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.5936e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.8856e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.2356e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.5534e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.8524e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.8981e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.5542e-08, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 27's server1 train acc:  16.96%, train loss: 2.2818
+INFO:root:Round 27's server2 train acc:  17.03%, train loss: 2.2819
+INFO:root:Round 27's server  test  acc:  18.88%, test  loss: 2.2800
+INFO:root:selected clients: [7 2 6 4 9 5 1 0 8 3]
+INFO:root:{'total_norm': tensor(5.0736e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.8772e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0029e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.4623e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.7750e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.8617e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.7849e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0008, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.8705e-07, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 28's server1 train acc:  20.20%, train loss: 2.2790
+INFO:root:Round 28's server2 train acc:  20.29%, train loss: 2.2793
+INFO:root:Round 28's server  test  acc:  22.43%, test  loss: 2.2770
+INFO:root:selected clients: [4 2 7 8 9 6 5 3 1 0]
+INFO:root:{'total_norm': tensor(5.6857e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.7824e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.7371e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.7057e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.2317e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1739e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2481e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.4116e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.7699e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.3062e-07, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 29's server1 train acc:  16.47%, train loss: 2.2795
+INFO:root:Round 29's server2 train acc:  16.50%, train loss: 2.2795
+INFO:root:Round 29's server  test  acc:  17.51%, test  loss: 2.2775
+INFO:root:selected clients: [7 9 8 5 1 3 0 2 6 4]
+INFO:root:{'total_norm': tensor(4.5415e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.5140e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.0197e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.2316e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.1612e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.5631e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.6687e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0561e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.8868e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 30's server1 train acc:  19.33%, train loss: 2.2767
+INFO:root:Round 30's server2 train acc:  19.46%, train loss: 2.2766
+INFO:root:Round 30's server  test  acc:  21.96%, test  loss: 2.2741
+INFO:root:selected clients: [5 4 2 3 7 6 0 8 9 1]
+INFO:root:{'total_norm': tensor(1.1000e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.4642e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.3552e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.2616e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.8996e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.6234e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.7394e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.5188e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.8212e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.6190e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 31's server1 train acc:  16.29%, train loss: 2.2764
+INFO:root:Round 31's server2 train acc:  16.04%, train loss: 2.2766
+INFO:root:Round 31's server  test  acc:  17.15%, test  loss: 2.2743
+INFO:root:selected clients: [0 8 2 9 7 3 5 6 1 4]
+INFO:root:{'total_norm': tensor(4.0637e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.8041e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0006, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.2513e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.7942e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.4134e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.4030e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.5021e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.5587e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.6308e-08, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 32's server1 train acc:  17.15%, train loss: 2.2736
+INFO:root:Round 32's server2 train acc:  17.17%, train loss: 2.2738
+INFO:root:Round 32's server  test  acc:  20.92%, test  loss: 2.2703
+INFO:root:selected clients: [4 0 1 6 9 3 8 7 5 2]
+INFO:root:{'total_norm': tensor(1.8800e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.9292e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1455e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.2126e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.4529e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.4757e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.6870e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0916e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.4525e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.8558e-05, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 33's server1 train acc:  15.92%, train loss: 2.2733
+INFO:root:Round 33's server2 train acc:  15.84%, train loss: 2.2732
+INFO:root:Round 33's server  test  acc:  16.44%, test  loss: 2.2708
+INFO:root:selected clients: [9 0 1 5 2 7 8 3 4 6]
+INFO:root:{'total_norm': tensor(3.0939e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1303e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.4100e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.0551e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.3035e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2940e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.6692e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.2283e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.1548e-09, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 34's server1 train acc:  15.39%, train loss: 2.2707
+INFO:root:Round 34's server2 train acc:  15.22%, train loss: 2.2706
+INFO:root:Round 34's server  test  acc:  18.26%, test  loss: 2.2661
+INFO:root:selected clients: [2 0 6 8 3 5 4 7 1 9]
+INFO:root:{'total_norm': tensor(1.7334e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.1525e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.3840e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.0726e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0810e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.7284e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.2141e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.4052e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.0205e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.2629e-09, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 35's server1 train acc:  14.88%, train loss: 2.2721
+INFO:root:Round 35's server2 train acc:  14.70%, train loss: 2.2719
+INFO:root:Round 35's server  test  acc:  14.55%, test  loss: 2.2689
+INFO:root:selected clients: [3 0 5 7 1 4 2 8 6 9]
+INFO:root:{'total_norm': tensor(2.9663e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.1755e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0014, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.1293e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.5878e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.0894e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.8915e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.3949e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.3189e-08, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 36's server1 train acc:  12.44%, train loss: 2.2724
+INFO:root:Round 36's server2 train acc:  12.33%, train loss: 2.2724
+INFO:root:Round 36's server  test  acc:  14.20%, test  loss: 2.2651
+INFO:root:selected clients: [9 0 6 4 3 5 7 8 1 2]
+INFO:root:{'total_norm': tensor(1.6923e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.0240e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.5355e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.5070e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.1381e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.3248e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2004e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.5947e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0018, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 37's server1 train acc:  11.44%, train loss: 2.2798
+INFO:root:Round 37's server2 train acc:  11.43%, train loss: 2.2798
+INFO:root:Round 37's server  test  acc:  11.26%, test  loss: 2.2747
+INFO:root:selected clients: [4 5 9 1 6 2 0 7 8 3]
+INFO:root:{'total_norm': tensor(1.1152e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.2412e-11, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.1278e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.5356e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1253e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0398e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0011, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.1163e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.5147e-08, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 38's server1 train acc:  11.59%, train loss: 2.2977
+INFO:root:Round 38's server2 train acc:  11.61%, train loss: 2.2973
+INFO:root:Round 38's server  test  acc:  11.92%, test  loss: 2.2806
+INFO:root:selected clients: [3 7 0 2 8 9 6 5 1 4]
+INFO:root:{'total_norm': tensor(3.6555e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.2983e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1791e-11, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.4295e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.6953e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.3962e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0067, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.5148e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.3490e-08, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 39's server1 train acc:  11.35%, train loss: 2.3232
+INFO:root:Round 39's server2 train acc:  11.35%, train loss: 2.3229
+INFO:root:Round 39's server  test  acc:  12.37%, test  loss: 2.3095
+INFO:root:selected clients: [1 8 6 2 9 7 4 3 5 0]
+INFO:root:{'total_norm': tensor(0.0007, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.9616e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.4661e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.7477e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0136, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.8786e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1338e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.4104e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0061, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 40's server1 train acc:  10.92%, train loss: 2.3638
+INFO:root:Round 40's server2 train acc:  10.77%, train loss: 2.3632
+INFO:root:Round 40's server  test  acc:  11.45%, test  loss: 2.3293
+INFO:root:selected clients: [3 0 9 4 2 1 8 7 5 6]
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.5592e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.6963e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.3087e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1248e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.8859e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.2454e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1120, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0254, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 41's server1 train acc:  11.37%, train loss: 2.3191
+INFO:root:Round 41's server2 train acc:  11.42%, train loss: 2.3192
+INFO:root:Round 41's server  test  acc:  12.23%, test  loss: 2.3061
+INFO:root:selected clients: [6 2 9 7 1 4 3 8 0 5]
+INFO:root:{'total_norm': tensor(9.0536e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0047, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.2463e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0661, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0093, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.8592e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.6986e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0264, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.2918e-08, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 42's server1 train acc:  13.02%, train loss: 2.3132
+INFO:root:Round 42's server2 train acc:  12.98%, train loss: 2.3130
+INFO:root:Round 42's server  test  acc:  14.47%, test  loss: 2.2934
+INFO:root:selected clients: [6 3 1 7 0 9 8 4 2 5]
+INFO:root:{'total_norm': tensor(0.0216, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0011, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.4853e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9313e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.5811e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.4074e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.1779e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0995, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 43's server1 train acc:  13.44%, train loss: 2.2764
+INFO:root:Round 43's server2 train acc:  13.38%, train loss: 2.2763
+INFO:root:Round 43's server  test  acc:  14.16%, test  loss: 2.2716
+INFO:root:selected clients: [1 4 0 8 9 6 3 5 2 7]
+INFO:root:{'total_norm': tensor(0.0013, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0058, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0131, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0006, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1745e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1926e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.9613e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.6981e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0248, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0094, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 44's server1 train acc:  13.92%, train loss: 2.2751
+INFO:root:Round 44's server2 train acc:  14.05%, train loss: 2.2751
+INFO:root:Round 44's server  test  acc:  17.25%, test  loss: 2.2645
+INFO:root:selected clients: [0 4 8 9 3 2 7 1 6 5]
+INFO:root:{'total_norm': tensor(1.5759e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.1652e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.4420e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0004, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0004, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.0631e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9711e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0116, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0026, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 45's server1 train acc:  15.24%, train loss: 2.2570
+INFO:root:Round 45's server2 train acc:  15.32%, train loss: 2.2572
+INFO:root:Round 45's server  test  acc:  15.54%, test  loss: 2.2552
+INFO:root:selected clients: [6 4 7 1 9 8 2 0 3 5]
+INFO:root:{'total_norm': tensor(7.9446e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0007, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0080, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.5101e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0010, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0053, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0004, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.8638e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.8140e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 46's server1 train acc:  19.11%, train loss: 2.2536
+INFO:root:Round 46's server2 train acc:  19.11%, train loss: 2.2539
+INFO:root:Round 46's server  test  acc:  22.75%, test  loss: 2.2472
+INFO:root:selected clients: [4 9 1 6 0 7 3 5 8 2]
+INFO:root:{'total_norm': tensor(4.1226e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.6033e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0004, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9033e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.4990e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0166e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.9184e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0004, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 47's server1 train acc:  19.79%, train loss: 2.2415
+INFO:root:Round 47's server2 train acc:  19.60%, train loss: 2.2416
+INFO:root:Round 47's server  test  acc:  20.75%, test  loss: 2.2401
+INFO:root:selected clients: [8 7 5 4 3 6 1 0 9 2]
+INFO:root:{'total_norm': tensor(0.0008, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0014, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.7652e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.5951e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.7044e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.8526e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.1250e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0032, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 48's server1 train acc:  19.22%, train loss: 2.2436
+INFO:root:Round 48's server2 train acc:  19.12%, train loss: 2.2440
+INFO:root:Round 48's server  test  acc:  22.81%, test  loss: 2.2340
+INFO:root:selected clients: [6 0 3 7 4 8 2 1 5 9]
+INFO:root:{'total_norm': tensor(4.9407e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.1241e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.6873e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1688e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.1064e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.4709e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.2002e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.3028e-05, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 49's server1 train acc:  15.55%, train loss: 2.2413
+INFO:root:Round 49's server2 train acc:  15.65%, train loss: 2.2413
+INFO:root:Round 49's server  test  acc:  16.73%, test  loss: 2.2402
+INFO:root:selected clients: [2 3 5 6 1 4 7 0 9 8]
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9060e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.8818e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.2803e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0096, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0006, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.7863e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 50's server1 train acc:  12.75%, train loss: 2.2753
+INFO:root:Round 50's server2 train acc:  12.84%, train loss: 2.2755
+INFO:root:Round 50's server  test  acc:  16.47%, test  loss: 2.2477
+INFO:root:selected clients: [1 8 4 5 7 9 6 0 3 2]
+INFO:root:{'total_norm': tensor(2.0727e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.2382e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.1766e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0045, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.3855e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.4622e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0039, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 51's server1 train acc:  12.98%, train loss: 2.2693
+INFO:root:Round 51's server2 train acc:  12.74%, train loss: 2.2693
+INFO:root:Round 51's server  test  acc:  12.60%, test  loss: 2.2645
+INFO:root:selected clients: [3 8 1 7 6 2 5 4 0 9]
+INFO:root:{'total_norm': tensor(5.3399e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0020, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0021, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0177, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.3060e-12, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0659, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.5257e-12, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0027, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0341, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.6845e-09, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 52's server1 train acc:  11.76%, train loss: 2.3348
+INFO:root:Round 52's server2 train acc:  11.73%, train loss: 2.3349
+INFO:root:Round 52's server  test  acc:  12.68%, test  loss: 2.2884
+INFO:root:selected clients: [3 4 2 9 6 8 5 0 1 7]
+INFO:root:{'total_norm': tensor(0.0100, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.0922e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.3776e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0066, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0571, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2517e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0564, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2026e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.4960e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.7735e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 53's server1 train acc:  15.10%, train loss: 2.2487
+INFO:root:Round 53's server2 train acc:  15.05%, train loss: 2.2487
+INFO:root:Round 53's server  test  acc:  15.40%, test  loss: 2.2467
+INFO:root:selected clients: [3 0 5 8 7 1 9 2 4 6]
+INFO:root:{'total_norm': tensor(3.5257e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0176, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.6896e-11, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0089, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0682, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0042, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.2846e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0109, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0045, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.2899e-11, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 54's server1 train acc:  14.77%, train loss: 2.2686
+INFO:root:Round 54's server2 train acc:  14.76%, train loss: 2.2685
+INFO:root:Round 54's server  test  acc:  18.77%, test  loss: 2.2403
+INFO:root:selected clients: [3 7 1 9 4 6 2 8 0 5]
+INFO:root:{'total_norm': tensor(0.0023, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0030, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.8827e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0037, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.5255e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0028, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.5808e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.9253e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0023, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 55's server1 train acc:  16.45%, train loss: 2.2258
+INFO:root:Round 55's server2 train acc:  16.62%, train loss: 2.2260
+INFO:root:Round 55's server  test  acc:  17.03%, test  loss: 2.2266
+INFO:root:selected clients: [4 1 5 8 3 7 6 9 0 2]
+INFO:root:{'total_norm': tensor(0.0011, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0198, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.5012e-12, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0132, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.8477e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0193, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.8715e-12, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.5784e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0014, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0200, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 56's server1 train acc:  13.95%, train loss: 2.2710
+INFO:root:Round 56's server2 train acc:  13.99%, train loss: 2.2713
+INFO:root:Round 56's server  test  acc:  17.88%, test  loss: 2.2321
+INFO:root:selected clients: [1 7 5 4 0 6 3 8 9 2]
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9952e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0068, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.6708e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.5733e-11, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0557, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0089, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0025, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0118, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 57's server1 train acc:  13.00%, train loss: 2.2413
+INFO:root:Round 57's server2 train acc:  12.97%, train loss: 2.2414
+INFO:root:Round 57's server  test  acc:  12.27%, test  loss: 2.2415
+INFO:root:selected clients: [3 6 9 0 5 4 7 1 2 8]
+INFO:root:{'total_norm': tensor(4.6929e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.0297e-12, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.6667e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0321, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2777e-12, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0039, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0115, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0467, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0479, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0041, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 58's server1 train acc:  12.54%, train loss: 2.3000
+INFO:root:Round 58's server2 train acc:  12.78%, train loss: 2.2991
+INFO:root:Round 58's server  test  acc:  15.82%, test  loss: 2.2491
+INFO:root:selected clients: [8 7 3 1 0 9 5 2 4 6]
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1333e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0128, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.9814e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.7530e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0072, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0572, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0033, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.5770e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1025, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 59's server1 train acc:  16.65%, train loss: 2.2224
+INFO:root:Round 59's server2 train acc:  16.52%, train loss: 2.2227
+INFO:root:Round 59's server  test  acc:  15.93%, test  loss: 2.2242
+INFO:root:selected clients: [6 3 4 9 0 2 7 5 8 1]
+INFO:root:{'total_norm': tensor(2.7295e-11, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.7370e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0045, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.7462e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0684, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0093, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0214, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.6842e-13, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0053, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0049, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 60's server1 train acc:  14.99%, train loss: 2.2689
+INFO:root:Round 60's server2 train acc:  14.96%, train loss: 2.2687
+INFO:root:Round 60's server  test  acc:  18.87%, test  loss: 2.2265
+INFO:root:selected clients: [4 7 6 1 9 2 3 8 5 0]
+INFO:root:{'total_norm': tensor(3.1360e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1083, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.5059e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0016, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0020, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0101, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0212, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.5344e-08, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 61's server1 train acc:  20.04%, train loss: 2.1945
+INFO:root:Round 61's server2 train acc:  20.02%, train loss: 2.1947
+INFO:root:Round 61's server  test  acc:  21.15%, test  loss: 2.1975
+INFO:root:selected clients: [0 7 2 9 1 8 6 3 5 4]
+INFO:root:{'total_norm': tensor(0.0019, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0713, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0050, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.2965e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0446, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0064, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.7281e-15, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.7185e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.5412e-12, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0013, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 62's server1 train acc:  19.63%, train loss: 2.2042
+INFO:root:Round 62's server2 train acc:  19.75%, train loss: 2.2041
+INFO:root:Round 62's server  test  acc:  22.67%, test  loss: 2.1769
+INFO:root:selected clients: [4 2 6 1 8 3 5 9 7 0]
+INFO:root:{'total_norm': tensor(1.2245e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0007, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0008, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0021, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.2549e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0006, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0006, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.7655e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 63's server1 train acc:  21.09%, train loss: 2.1818
+INFO:root:Round 63's server2 train acc:  20.99%, train loss: 2.1817
+INFO:root:Round 63's server  test  acc:  20.72%, test  loss: 2.1874
+INFO:root:selected clients: [3 9 6 0 8 5 2 4 7 1]
+INFO:root:{'total_norm': tensor(3.6534e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.7201e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.8116e-14, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0007, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.1666e-12, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0106, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0010, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0110, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0202, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 64's server1 train acc:  14.68%, train loss: 2.2954
+INFO:root:Round 64's server2 train acc:  14.51%, train loss: 2.2953
+INFO:root:Round 64's server  test  acc:  18.27%, test  loss: 2.2240
+INFO:root:selected clients: [3 8 4 5 0 7 6 1 2 9]
+INFO:root:{'total_norm': tensor(0.0116, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0027, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.5966e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0033, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.9480e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.8175e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0119, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.3452e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0042, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0126, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 65's server1 train acc:  16.87%, train loss: 2.2201
+INFO:root:Round 65's server2 train acc:  16.83%, train loss: 2.2212
+INFO:root:Round 65's server  test  acc:  16.55%, test  loss: 2.2241
+INFO:root:selected clients: [7 2 3 6 5 4 9 0 1 8]
+INFO:root:{'total_norm': tensor(0.1581, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0234, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.5282e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.1644e-13, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.7509e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0017, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.3536e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1556, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0975, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0027, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 66's server1 train acc:  17.44%, train loss: 2.2590
+INFO:root:Round 66's server2 train acc:  17.36%, train loss: 2.2598
+INFO:root:Round 66's server  test  acc:  20.71%, test  loss: 2.2071
+INFO:root:selected clients: [5 1 6 9 3 4 0 8 2 7]
+INFO:root:{'total_norm': tensor(0.0035, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0015, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0009, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0136, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0093, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.2142e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9157e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.5790e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0039, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0004, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 67's server1 train acc:  19.59%, train loss: 2.1828
+INFO:root:Round 67's server2 train acc:  19.43%, train loss: 2.1839
+INFO:root:Round 67's server  test  acc:  20.10%, test  loss: 2.1898
+INFO:root:selected clients: [2 1 0 3 9 7 8 5 6 4]
+INFO:root:{'total_norm': tensor(0.0323, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0466, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0066, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0952e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2667e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.2401, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0018, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.3759e-15, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.8859e-16, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0626, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 68's server1 train acc:  17.59%, train loss: 2.2257
+INFO:root:Round 68's server2 train acc:  17.65%, train loss: 2.2269
+INFO:root:Round 68's server  test  acc:  20.81%, test  loss: 2.1728
+INFO:root:selected clients: [4 1 2 6 9 0 8 7 5 3]
+INFO:root:{'total_norm': tensor(0.0004, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0080, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0027, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.0623e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0059, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.7171e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0010, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.9965e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0010, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0007, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 69's server1 train acc:  18.12%, train loss: 2.1727
+INFO:root:Round 69's server2 train acc:  17.97%, train loss: 2.1730
+INFO:root:Round 69's server  test  acc:  17.04%, test  loss: 2.1800
+INFO:root:selected clients: [1 4 3 8 0 2 9 7 5 6]
+INFO:root:{'total_norm': tensor(0.0024, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0007, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1687e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0063, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0059, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0287, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.2868e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0817, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9120e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.3297e-10, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 70's server1 train acc:  16.30%, train loss: 2.2687
+INFO:root:Round 70's server2 train acc:  16.32%, train loss: 2.2682
+INFO:root:Round 70's server  test  acc:  19.80%, test  loss: 2.2006
+INFO:root:selected clients: [4 8 9 3 1 6 5 0 2 7]
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0180, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0223, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0012, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0018, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0079, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0071, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.6768e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0006, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0010, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 71's server1 train acc:  17.92%, train loss: 2.1631
+INFO:root:Round 71's server2 train acc:  18.06%, train loss: 2.1632
+INFO:root:Round 71's server  test  acc:  17.81%, test  loss: 2.1683
+INFO:root:selected clients: [8 3 1 5 4 0 2 6 7 9]
+INFO:root:{'total_norm': tensor(0.0158, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.3653e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0479, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.4603e-17, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0092, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0161, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0352, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.5212e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1019, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.6448e-05, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 72's server1 train acc:  20.15%, train loss: 2.1769
+INFO:root:Round 72's server2 train acc:  20.26%, train loss: 2.1771
+INFO:root:Round 72's server  test  acc:  22.74%, test  loss: 2.1461
+INFO:root:selected clients: [1 9 7 4 8 0 2 5 3 6]
+INFO:root:{'total_norm': tensor(0.0094, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.7098e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0004, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0009, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0015, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0820, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0040, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.9788e-05, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 73's server1 train acc:  20.96%, train loss: 2.1537
+INFO:root:Round 73's server2 train acc:  21.00%, train loss: 2.1535
+INFO:root:Round 73's server  test  acc:  20.96%, test  loss: 2.1599
+INFO:root:selected clients: [8 6 5 0 7 3 1 2 9 4]
+INFO:root:{'total_norm': tensor(0.0045, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.4998e-15, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0572e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0325, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9816e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0053, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1136, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1655e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0017, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 74's server1 train acc:  20.53%, train loss: 2.1739
+INFO:root:Round 74's server2 train acc:  20.57%, train loss: 2.1742
+INFO:root:Round 74's server  test  acc:  23.27%, test  loss: 2.1373
+INFO:root:selected clients: [7 8 0 3 1 2 6 5 4 9]
+INFO:root:{'total_norm': tensor(6.2278e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0042, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.7261e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.6500e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0055, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.3899e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0008, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.3905e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 75's server1 train acc:  21.85%, train loss: 2.1371
+INFO:root:Round 75's server2 train acc:  21.91%, train loss: 2.1372
+INFO:root:Round 75's server  test  acc:  22.21%, test  loss: 2.1425
+INFO:root:selected clients: [7 1 8 5 4 9 2 6 3 0]
+INFO:root:{'total_norm': tensor(0.0153, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0051, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0006, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9040e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0011, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.8992e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1027, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.7459e-12, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1926e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0022, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 76's server1 train acc:  19.89%, train loss: 2.2184
+INFO:root:Round 76's server2 train acc:  19.80%, train loss: 2.2183
+INFO:root:Round 76's server  test  acc:  23.02%, test  loss: 2.1586
+INFO:root:selected clients: [6 8 4 5 2 9 1 0 7 3]
+INFO:root:{'total_norm': tensor(0.0034, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.3458e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.5538e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0262, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0745, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0049, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.2367e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.1480e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0079, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 77's server1 train acc:  16.67%, train loss: 2.1704
+INFO:root:Round 77's server2 train acc:  16.68%, train loss: 2.1703
+INFO:root:Round 77's server  test  acc:  16.76%, test  loss: 2.1761
+INFO:root:selected clients: [5 7 1 6 3 2 4 8 9 0]
+INFO:root:{'total_norm': tensor(1.2416e-16, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.3058, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0450, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.7518e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.2267e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0694, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0590, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0044, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0087, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 78's server1 train acc:  19.84%, train loss: 2.2075
+INFO:root:Round 78's server2 train acc:  19.90%, train loss: 2.2070
+INFO:root:Round 78's server  test  acc:  23.11%, test  loss: 2.1533
+INFO:root:selected clients: [7 5 8 3 4 0 9 1 2 6]
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0379, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.6176e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0186, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0356, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9844e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0013, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0085, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 79's server1 train acc:  20.87%, train loss: 2.1461
+INFO:root:Round 79's server2 train acc:  20.80%, train loss: 2.1460
+INFO:root:Round 79's server  test  acc:  21.02%, test  loss: 2.1493
+INFO:root:selected clients: [9 7 4 1 3 0 6 2 8 5]
+INFO:root:{'total_norm': tensor(4.6684e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.2151, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0041, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1299, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.9231e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0033, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2091e-16, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0620, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0250, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.7034e-06, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 80's server1 train acc:  22.09%, train loss: 2.1566
+INFO:root:Round 80's server2 train acc:  22.13%, train loss: 2.1571
+INFO:root:Round 80's server  test  acc:  25.15%, test  loss: 2.1181
+INFO:root:selected clients: [4 2 6 3 0 1 7 8 5 9]
+INFO:root:{'total_norm': tensor(0.0020, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0082, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.4474e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.9563e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.6952e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0010, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.4148e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0007, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0124, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 81's server1 train acc:  23.22%, train loss: 2.1013
+INFO:root:Round 81's server2 train acc:  23.06%, train loss: 2.1016
+INFO:root:Round 81's server  test  acc:  23.54%, test  loss: 2.1037
+INFO:root:selected clients: [7 5 8 9 2 3 0 4 6 1]
+INFO:root:{'total_norm': tensor(0.0727, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.5754e-13, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.7297e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1095, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.3278e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0010, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0011, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2999e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0488, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 82's server1 train acc:  21.20%, train loss: 2.1526
+INFO:root:Round 82's server2 train acc:  21.31%, train loss: 2.1525
+INFO:root:Round 82's server  test  acc:  23.64%, test  loss: 2.1067
+INFO:root:selected clients: [1 5 0 6 9 2 4 8 3 7]
+INFO:root:{'total_norm': tensor(0.0084, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9891e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.1250e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0020, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0107, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.7841e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0006, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.7365e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.7157e-05, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 83's server1 train acc:  20.69%, train loss: 2.1369
+INFO:root:Round 83's server2 train acc:  20.53%, train loss: 2.1386
+INFO:root:Round 83's server  test  acc:  20.55%, test  loss: 2.1443
+INFO:root:selected clients: [5 9 7 1 6 0 8 4 3 2]
+INFO:root:{'total_norm': tensor(1.5600e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.3690e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1906, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.4891e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.6936e-15, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.6117e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0036, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0012, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.8903e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0111, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 84's server1 train acc:  19.08%, train loss: 2.2274
+INFO:root:Round 84's server2 train acc:  19.17%, train loss: 2.2274
+INFO:root:Round 84's server  test  acc:  22.47%, test  loss: 2.1529
+INFO:root:selected clients: [2 5 0 4 3 6 1 7 8 9]
+INFO:root:{'total_norm': tensor(0.0175, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0468, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.2069e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0550, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0044, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1324, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.1092e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0070, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0016, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0598, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 85's server1 train acc:  18.20%, train loss: 2.1411
+INFO:root:Round 85's server2 train acc:  18.14%, train loss: 2.1410
+INFO:root:Round 85's server  test  acc:  17.51%, test  loss: 2.1472
+INFO:root:selected clients: [4 9 5 8 0 1 2 6 3 7]
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.0315e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.4981e-19, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0018, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0021, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0215, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1017, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.8277e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.2953e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0266, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 86's server1 train acc:  22.31%, train loss: 2.1565
+INFO:root:Round 86's server2 train acc:  22.12%, train loss: 2.1566
+INFO:root:Round 86's server  test  acc:  25.38%, test  loss: 2.1119
+INFO:root:selected clients: [2 8 9 6 0 3 5 4 1 7]
+INFO:root:{'total_norm': tensor(0.0095, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.8524e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0627, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0042, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0029, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.5458e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0029, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0085, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 87's server1 train acc:  23.33%, train loss: 2.0887
+INFO:root:Round 87's server2 train acc:  23.19%, train loss: 2.0877
+INFO:root:Round 87's server  test  acc:  23.75%, test  loss: 2.0923
+INFO:root:selected clients: [3 9 7 0 5 2 1 4 8 6]
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0004, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0477, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.7230e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.6465e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1452, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0198, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0036, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0011, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.5547e-13, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 88's server1 train acc:  20.60%, train loss: 2.1516
+INFO:root:Round 88's server2 train acc:  20.88%, train loss: 2.1512
+INFO:root:Round 88's server  test  acc:  23.76%, test  loss: 2.0971
+INFO:root:selected clients: [1 9 0 6 3 2 7 8 4 5]
+INFO:root:{'total_norm': tensor(0.0161, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0049, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.7321e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.0297e-11, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.1913e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0096, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0054, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0006, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1221, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 89's server1 train acc:  17.96%, train loss: 2.1559
+INFO:root:Round 89's server2 train acc:  18.04%, train loss: 2.1554
+INFO:root:Round 89's server  test  acc:  17.21%, test  loss: 2.1657
+INFO:root:selected clients: [0 7 1 4 8 9 6 5 3 2]
+INFO:root:{'total_norm': tensor(0.0154, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0238, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0045, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0028, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0085, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0., device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0023, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.8576e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1860, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 90's server1 train acc:  19.18%, train loss: 2.2456
+INFO:root:Round 90's server2 train acc:  19.37%, train loss: 2.2464
+INFO:root:Round 90's server  test  acc:  22.80%, test  loss: 2.1903
+INFO:root:selected clients: [4 6 0 9 8 5 3 7 1 2]
+INFO:root:{'total_norm': tensor(0.0008, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0010, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.8036e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0509, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0010, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0035, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0047, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0004, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0951, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 91's server1 train acc:  21.39%, train loss: 2.1343
+INFO:root:Round 91's server2 train acc:  21.51%, train loss: 2.1341
+INFO:root:Round 91's server  test  acc:  21.55%, test  loss: 2.1368
+INFO:root:selected clients: [1 3 4 2 9 0 7 8 5 6]
+INFO:root:{'total_norm': tensor(0.0801, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.7429e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0298, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0724, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0769e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0152, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0084, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1412, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.7238e-16, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0111, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 92's server1 train acc:  23.75%, train loss: 2.0677
+INFO:root:Round 92's server2 train acc:  24.06%, train loss: 2.0672
+INFO:root:Round 92's server  test  acc:  24.81%, test  loss: 2.0606
+INFO:root:selected clients: [7 1 5 8 0 6 4 2 9 3]
+INFO:root:{'total_norm': tensor(0.1924, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0024, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9822e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.6017e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.7420e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(9.7654e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0015, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.2180, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.7943e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.8617e-09, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 93's server1 train acc:  24.54%, train loss: 2.0521
+INFO:root:Round 93's server2 train acc:  24.67%, train loss: 2.0519
+INFO:root:Round 93's server  test  acc:  26.06%, test  loss: 2.0357
+INFO:root:selected clients: [5 8 1 7 0 9 2 3 6 4]
+INFO:root:{'total_norm': tensor(0.0060, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.2065e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.9804e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0555, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0792e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0194e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.1418, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.2601e-11, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.8252e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.9452e-08, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 94's server1 train acc:  24.42%, train loss: 2.0489
+INFO:root:Round 94's server2 train acc:  24.33%, train loss: 2.0495
+INFO:root:Round 94's server  test  acc:  25.64%, test  loss: 2.0352
+INFO:root:selected clients: [0 5 3 9 1 7 6 2 8 4]
+INFO:root:{'total_norm': tensor(8.3497e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.6381e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.1274e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.1313e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.7657e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0271, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.6949e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0036, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1159e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.8169e-05, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 95's server1 train acc:  24.17%, train loss: 2.0428
+INFO:root:Round 95's server2 train acc:  24.43%, train loss: 2.0423
+INFO:root:Round 95's server  test  acc:  25.59%, test  loss: 2.0262
+INFO:root:selected clients: [6 0 7 5 9 1 8 3 2 4]
+INFO:root:{'total_norm': tensor(1.5505e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.3044e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0015, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0041, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.2921e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1906e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0002, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.9122e-11, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0018, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.0180e-08, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 96's server1 train acc:  24.76%, train loss: 2.0393
+INFO:root:Round 96's server2 train acc:  24.67%, train loss: 2.0391
+INFO:root:Round 96's server  test  acc:  26.76%, test  loss: 2.0186
+INFO:root:selected clients: [2 7 1 3 4 5 9 6 0 8]
+INFO:root:{'total_norm': tensor(0.0063, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0125, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0232e-05, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.4611e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0004, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.5397e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.6236e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0., device='cuda:0')}
+INFO:root:{'total_norm': tensor(7.8317e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.0450e-08, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 97's server1 train acc:  24.38%, train loss: 2.0398
+INFO:root:Round 97's server2 train acc:  24.44%, train loss: 2.0375
+INFO:root:Round 97's server  test  acc:  26.00%, test  loss: 2.0168
+INFO:root:selected clients: [1 7 4 6 0 3 2 8 5 9]
+INFO:root:{'total_norm': tensor(5.7644e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0001, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0003, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.1646e-07, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.7871e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.1825e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0048, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.6972e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.0744e-10, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.7938e-07, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 98's server1 train acc:  24.59%, train loss: 2.0375
+INFO:root:Round 98's server2 train acc:  24.60%, train loss: 2.0383
+INFO:root:Round 98's server  test  acc:  25.85%, test  loss: 2.0270
+INFO:root:selected clients: [1 9 6 2 3 8 4 7 5 0]
+INFO:root:{'total_norm': tensor(1.4723e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.2887e-08, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.0274e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0093, device='cuda:0')}
+INFO:root:{'total_norm': tensor(5.9769e-12, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.4371e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.0855e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0005, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.1927e-13, device='cuda:0')}
+INFO:root:{'total_norm': tensor(2.4644e-10, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 99's server1 train acc:  23.58%, train loss: 2.0608
+INFO:root:Round 99's server2 train acc:  23.50%, train loss: 2.0593
+INFO:root:Round 99's server  test  acc:  25.16%, test  loss: 2.0261
+INFO:root:selected clients: [1 3 6 8 5 9 2 4 7 0]
+INFO:root:{'total_norm': tensor(2.8683e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(3.1375e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(6.8681e-13, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.2082e-12, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0008, device='cuda:0')}
+INFO:root:{'total_norm': tensor(4.6141e-09, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0016, device='cuda:0')}
+INFO:root:{'total_norm': tensor(8.0697e-06, device='cuda:0')}
+INFO:root:{'total_norm': tensor(0.0007, device='cuda:0')}
+INFO:root:{'total_norm': tensor(1.8726e-11, device='cuda:0')}
+INFO:root:lr=0.1
+INFO:root:Round 100's server1 train acc:  23.17%, train loss: 2.0545
+INFO:root:Round 100's server2 train acc:  23.47%, train loss: 2.0556
+INFO:root:Round 100's server  test  acc:  24.02%, test  loss: 2.0541
+INFO:root:TrainingTime: 2785.4791774749756 sec

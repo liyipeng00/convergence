@@ -1,0 +1,433 @@
+INFO:root:Namespace(m='wvgg9k4', d='cifar10', s=2, R=100, K=5, M=10, P=10, partition='exdir', alpha=[2, 10.0], optim='sgd', lr=0.1, lr_decay=1.0, momentum=0.0, weight_decay=0.0001, global_lr=1.0, batch_size=20, seed=1234, clip=10, log='Log', eval_num=100, tail_eval_num=0, device=0, save_model=0, start_round=0, case=3)
+INFO:root:record_name: FedAvg-VI3_M10_P10_K5_R100_wvgg9k4_cifar10_exdir2,10.0_sgd0.1,1.0,0.0,0.0001_b20_seed1234_clip10
+INFO:root:VGG(
+  (features): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (4): ReLU(inplace=True)
+    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (6): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (7): ReLU(inplace=True)
+    (8): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (9): ReLU(inplace=True)
+    (10): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (11): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (12): ReLU(inplace=True)
+    (13): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (14): ReLU(inplace=True)
+    (15): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (17): ReLU(inplace=True)
+    (18): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (19): ReLU(inplace=True)
+    (20): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (classifier): Linear(in_features=256, out_features=10, bias=True)
+)
+INFO:root:Before reset: [0.01, 0.60, 0.00, 0.00, 0.00]
+INFO:root:Round 1's server1 train acc:  10.00%, train loss: 2.3061
+INFO:root:After inference1: [0.01, 0.00, 1.70, 0.22, 1.02]
+INFO:root:Round 1's server  test  acc:  10.00%, test  loss: 2.3060
+INFO:root:After inference2: [0.01, 0.13, 2.06, 0.22, 1.20]
+INFO:root:Round 2's server1 train acc:  10.00%, train loss: 2.3381
+INFO:root:After inference1: [0.01, 0.13, 3.76, 0.28, 2.12]
+INFO:root:Round 2's server  test  acc:  10.00%, test  loss: 2.3380
+INFO:root:After inference2: [0.02, 0.26, 4.12, 0.28, 2.31]
+INFO:root:Round 3's server1 train acc:  10.49%, train loss: 2.3299
+INFO:root:After inference1: [0.02, 0.26, 5.83, 0.34, 3.22]
+INFO:root:Round 3's server  test  acc:  10.62%, test  loss: 2.3301
+INFO:root:After inference2: [0.03, 0.39, 6.19, 0.34, 3.41]
+INFO:root:Round 4's server1 train acc:   9.99%, train loss: 2.3204
+INFO:root:After inference1: [0.03, 0.39, 7.89, 0.39, 4.32]
+INFO:root:Round 4's server  test  acc:   9.99%, test  loss: 2.3204
+INFO:root:After inference2: [0.03, 0.51, 8.25, 0.39, 4.51]
+INFO:root:Round 5's server1 train acc:  10.00%, train loss: 2.4121
+INFO:root:After inference1: [0.04, 0.51, 9.95, 0.45, 5.42]
+INFO:root:Round 5's server  test  acc:  10.00%, test  loss: 2.4119
+INFO:root:After inference2: [0.04, 0.64, 10.31, 0.45, 5.61]
+INFO:root:Round 6's server1 train acc:  10.00%, train loss: 2.3625
+INFO:root:After inference1: [0.05, 0.64, 12.00, 0.51, 6.52]
+INFO:root:Round 6's server  test  acc:  10.00%, test  loss: 2.3626
+INFO:root:After inference2: [0.05, 0.77, 12.36, 0.51, 6.71]
+INFO:root:Round 7's server1 train acc:  10.11%, train loss: 2.3536
+INFO:root:After inference1: [0.06, 0.77, 14.07, 0.57, 7.62]
+INFO:root:Round 7's server  test  acc:  10.08%, test  loss: 2.3535
+INFO:root:After inference2: [0.06, 0.90, 14.43, 0.57, 7.81]
+INFO:root:Round 8's server1 train acc:  10.00%, train loss: 2.3453
+INFO:root:After inference1: [0.07, 0.90, 16.12, 0.63, 8.72]
+INFO:root:Round 8's server  test  acc:  10.00%, test  loss: 2.3451
+INFO:root:After inference2: [0.07, 1.03, 16.48, 0.63, 8.91]
+INFO:root:Round 9's server1 train acc:  10.00%, train loss: 2.3175
+INFO:root:After inference1: [0.07, 1.03, 18.19, 0.69, 9.83]
+INFO:root:Round 9's server  test  acc:  10.00%, test  loss: 2.3173
+INFO:root:After inference2: [0.08, 1.16, 18.55, 0.69, 10.02]
+INFO:root:Round 10's server1 train acc:  10.00%, train loss: 2.3067
+INFO:root:After inference1: [0.08, 1.16, 20.26, 0.75, 10.94]
+INFO:root:Round 10's server  test  acc:  10.00%, test  loss: 2.3067
+INFO:root:After inference2: [0.09, 1.29, 20.62, 0.75, 11.13]
+INFO:root:Round 11's server1 train acc:  10.00%, train loss: 2.3368
+INFO:root:After inference1: [0.09, 1.29, 22.32, 0.80, 12.05]
+INFO:root:Round 11's server  test  acc:  10.00%, test  loss: 2.3368
+INFO:root:After inference2: [0.09, 1.42, 22.68, 0.80, 12.23]
+INFO:root:Round 12's server1 train acc:  10.00%, train loss: 2.3113
+INFO:root:After inference1: [0.10, 1.42, 24.38, 0.86, 13.15]
+INFO:root:Round 12's server  test  acc:  10.00%, test  loss: 2.3115
+INFO:root:After inference2: [0.10, 1.55, 24.74, 0.86, 13.34]
+INFO:root:Round 13's server1 train acc:  10.00%, train loss: 2.3040
+INFO:root:After inference1: [0.11, 1.55, 26.44, 0.92, 14.25]
+INFO:root:Round 13's server  test  acc:  10.00%, test  loss: 2.3041
+INFO:root:After inference2: [0.11, 1.68, 26.80, 0.92, 14.44]
+INFO:root:Round 14's server1 train acc:  10.00%, train loss: 2.3384
+INFO:root:After inference1: [0.12, 1.68, 28.49, 0.98, 15.35]
+INFO:root:Round 14's server  test  acc:  10.00%, test  loss: 2.3388
+INFO:root:After inference2: [0.12, 1.81, 28.85, 0.98, 15.54]
+INFO:root:Round 15's server1 train acc:  10.09%, train loss: 2.3084
+INFO:root:After inference1: [0.12, 1.81, 30.55, 1.04, 16.46]
+INFO:root:Round 15's server  test  acc:  10.06%, test  loss: 2.3086
+INFO:root:After inference2: [0.13, 1.93, 30.91, 1.04, 16.64]
+INFO:root:Round 16's server1 train acc:  10.00%, train loss: 2.3538
+INFO:root:After inference1: [0.13, 1.93, 32.62, 1.10, 17.56]
+INFO:root:Round 16's server  test  acc:  10.00%, test  loss: 2.3543
+INFO:root:After inference2: [0.14, 2.06, 32.98, 1.10, 17.74]
+INFO:root:Round 17's server1 train acc:  10.00%, train loss: 2.3255
+INFO:root:After inference1: [0.14, 2.06, 34.67, 1.16, 18.66]
+INFO:root:Round 17's server  test  acc:  10.00%, test  loss: 2.3258
+INFO:root:After inference2: [0.14, 2.19, 35.03, 1.16, 18.85]
+INFO:root:Round 18's server1 train acc:  10.89%, train loss: 2.3271
+INFO:root:After inference1: [0.15, 2.19, 36.74, 1.22, 19.77]
+INFO:root:Round 18's server  test  acc:  10.69%, test  loss: 2.3275
+INFO:root:After inference2: [0.15, 2.32, 37.10, 1.22, 19.95]
+INFO:root:Round 19's server1 train acc:  10.93%, train loss: 2.3413
+INFO:root:After inference1: [0.16, 2.32, 38.79, 1.27, 20.87]
+INFO:root:Round 19's server  test  acc:  10.97%, test  loss: 2.3416
+INFO:root:After inference2: [0.16, 2.45, 39.15, 1.27, 21.05]
+INFO:root:Round 20's server1 train acc:  11.10%, train loss: 2.2927
+INFO:root:After inference1: [0.17, 2.45, 40.85, 1.33, 21.97]
+INFO:root:Round 20's server  test  acc:  11.42%, test  loss: 2.2931
+INFO:root:After inference2: [0.17, 2.58, 41.21, 1.33, 22.15]
+INFO:root:Round 21's server1 train acc:  11.68%, train loss: 2.3006
+INFO:root:After inference1: [0.17, 2.58, 42.92, 1.39, 23.07]
+INFO:root:Round 21's server  test  acc:  11.62%, test  loss: 2.3008
+INFO:root:After inference2: [0.18, 2.71, 43.28, 1.39, 23.26]
+INFO:root:Round 22's server1 train acc:  10.00%, train loss: 2.2866
+INFO:root:After inference1: [0.18, 2.71, 44.98, 1.45, 24.18]
+INFO:root:Round 22's server  test  acc:  10.00%, test  loss: 2.2870
+INFO:root:After inference2: [0.19, 2.84, 45.35, 1.45, 24.37]
+INFO:root:Round 23's server1 train acc:  12.11%, train loss: 2.2935
+INFO:root:After inference1: [0.19, 2.84, 47.05, 1.51, 25.28]
+INFO:root:Round 23's server  test  acc:  12.05%, test  loss: 2.2937
+INFO:root:After inference2: [0.20, 2.97, 47.41, 1.51, 25.47]
+INFO:root:Round 24's server1 train acc:  13.22%, train loss: 2.2766
+INFO:root:After inference1: [0.20, 2.97, 49.11, 1.57, 26.39]
+INFO:root:Round 24's server  test  acc:  13.26%, test  loss: 2.2768
+INFO:root:After inference2: [0.20, 3.09, 49.47, 1.57, 26.57]
+INFO:root:Round 25's server1 train acc:  10.00%, train loss: 2.2736
+INFO:root:After inference1: [0.21, 3.09, 51.17, 1.63, 27.49]
+INFO:root:Round 25's server  test  acc:  10.00%, test  loss: 2.2745
+INFO:root:After inference2: [0.21, 3.22, 51.53, 1.63, 27.68]
+INFO:root:Round 26's server1 train acc:  10.03%, train loss: 2.2860
+INFO:root:After inference1: [0.22, 3.22, 53.22, 1.68, 28.59]
+INFO:root:Round 26's server  test  acc:  10.01%, test  loss: 2.2863
+INFO:root:After inference2: [0.22, 3.35, 53.59, 1.68, 28.78]
+INFO:root:Round 27's server1 train acc:  10.00%, train loss: 2.2690
+INFO:root:After inference1: [0.23, 3.35, 55.29, 1.74, 29.70]
+INFO:root:Round 27's server  test  acc:  10.00%, test  loss: 2.2700
+INFO:root:After inference2: [0.23, 3.48, 55.65, 1.74, 29.89]
+INFO:root:Round 28's server1 train acc:  10.52%, train loss: 2.2645
+INFO:root:After inference1: [0.23, 3.48, 57.35, 1.80, 30.80]
+INFO:root:Round 28's server  test  acc:  10.41%, test  loss: 2.2649
+INFO:root:After inference2: [0.24, 3.61, 57.71, 1.80, 30.99]
+INFO:root:Round 29's server1 train acc:  15.48%, train loss: 2.2340
+INFO:root:After inference1: [0.24, 3.61, 59.42, 1.86, 31.91]
+INFO:root:Round 29's server  test  acc:  15.95%, test  loss: 2.2346
+INFO:root:After inference2: [0.25, 3.74, 59.78, 1.86, 32.10]
+INFO:root:Round 30's server1 train acc:  14.21%, train loss: 2.2273
+INFO:root:After inference1: [0.25, 3.74, 61.49, 1.92, 33.02]
+INFO:root:Round 30's server  test  acc:  14.46%, test  loss: 2.2277
+INFO:root:After inference2: [0.25, 3.87, 61.85, 1.92, 33.21]
+INFO:root:Round 31's server1 train acc:  16.48%, train loss: 2.2014
+INFO:root:After inference1: [0.26, 3.87, 63.55, 1.98, 34.13]
+INFO:root:Round 31's server  test  acc:  16.52%, test  loss: 2.2019
+INFO:root:After inference2: [0.26, 4.00, 63.91, 1.98, 34.31]
+INFO:root:Round 32's server1 train acc:  18.83%, train loss: 2.2049
+INFO:root:After inference1: [0.27, 4.00, 65.60, 2.04, 35.22]
+INFO:root:Round 32's server  test  acc:  19.39%, test  loss: 2.2052
+INFO:root:After inference2: [0.27, 4.13, 65.96, 2.04, 35.41]
+INFO:root:Round 33's server1 train acc:  17.63%, train loss: 2.1708
+INFO:root:After inference1: [0.28, 4.13, 67.66, 2.10, 36.32]
+INFO:root:Round 33's server  test  acc:  18.03%, test  loss: 2.1712
+INFO:root:After inference2: [0.28, 4.26, 68.02, 2.10, 36.51]
+INFO:root:Round 34's server1 train acc:  16.67%, train loss: 2.1641
+INFO:root:After inference1: [0.29, 4.26, 69.71, 2.16, 37.42]
+INFO:root:Round 34's server  test  acc:  16.81%, test  loss: 2.1648
+INFO:root:After inference2: [0.29, 4.39, 70.07, 2.16, 37.61]
+INFO:root:Round 35's server1 train acc:  20.39%, train loss: 2.1479
+INFO:root:After inference1: [0.29, 4.39, 71.78, 2.21, 38.53]
+INFO:root:Round 35's server  test  acc:  21.06%, test  loss: 2.1480
+INFO:root:After inference2: [0.30, 4.52, 72.14, 2.21, 38.71]
+INFO:root:Round 36's server1 train acc:  19.45%, train loss: 2.1498
+INFO:root:After inference1: [0.30, 4.52, 73.85, 2.27, 39.63]
+INFO:root:Round 36's server  test  acc:  19.14%, test  loss: 2.1503
+INFO:root:After inference2: [0.31, 4.65, 74.21, 2.27, 39.82]
+INFO:root:Round 37's server1 train acc:  12.89%, train loss: 2.2273
+INFO:root:After inference1: [0.31, 4.65, 75.91, 2.33, 40.74]
+INFO:root:Round 37's server  test  acc:  12.83%, test  loss: 2.2261
+INFO:root:After inference2: [0.31, 4.78, 76.27, 2.33, 40.92]
+INFO:root:Round 38's server1 train acc:  17.21%, train loss: 2.1437
+INFO:root:After inference1: [0.32, 4.78, 77.96, 2.39, 41.84]
+INFO:root:Round 38's server  test  acc:  17.02%, test  loss: 2.1444
+INFO:root:After inference2: [0.32, 4.91, 78.32, 2.39, 42.03]
+INFO:root:Round 39's server1 train acc:  19.26%, train loss: 2.1420
+INFO:root:After inference1: [0.33, 4.91, 80.01, 2.45, 42.94]
+INFO:root:Round 39's server  test  acc:  19.01%, test  loss: 2.1445
+INFO:root:After inference2: [0.33, 5.03, 80.37, 2.45, 43.13]
+INFO:root:Round 40's server1 train acc:  15.13%, train loss: 2.1437
+INFO:root:After inference1: [0.34, 5.03, 82.07, 2.51, 44.04]
+INFO:root:Round 40's server  test  acc:  14.63%, test  loss: 2.1452
+INFO:root:After inference2: [0.34, 5.16, 82.43, 2.51, 44.23]
+INFO:root:Round 41's server1 train acc:  19.48%, train loss: 2.1330
+INFO:root:After inference1: [0.34, 5.16, 84.10, 2.57, 45.14]
+INFO:root:Round 41's server  test  acc:  19.08%, test  loss: 2.1356
+INFO:root:After inference2: [0.35, 5.29, 84.46, 2.57, 45.33]
+INFO:root:Round 42's server1 train acc:  17.59%, train loss: 2.1197
+INFO:root:After inference1: [0.35, 5.29, 86.17, 2.63, 46.25]
+INFO:root:Round 42's server  test  acc:  17.53%, test  loss: 2.1218
+INFO:root:After inference2: [0.36, 5.42, 86.54, 2.63, 46.44]
+INFO:root:Round 43's server1 train acc:  17.34%, train loss: 2.1021
+INFO:root:After inference1: [0.36, 5.42, 88.23, 2.68, 47.35]
+INFO:root:Round 43's server  test  acc:  17.23%, test  loss: 2.1027
+INFO:root:After inference2: [0.36, 5.55, 88.59, 2.68, 47.54]
+INFO:root:Round 44's server1 train acc:  20.38%, train loss: 2.1169
+INFO:root:After inference1: [0.37, 5.55, 90.28, 2.74, 48.45]
+INFO:root:Round 44's server  test  acc:  20.01%, test  loss: 2.1175
+INFO:root:After inference2: [0.37, 5.68, 90.64, 2.74, 48.63]
+INFO:root:Round 45's server1 train acc:  19.57%, train loss: 2.0974
+INFO:root:After inference1: [0.38, 5.68, 92.32, 2.80, 49.55]
+INFO:root:Round 45's server  test  acc:  19.36%, test  loss: 2.1001
+INFO:root:After inference2: [0.38, 5.81, 92.69, 2.80, 49.73]
+INFO:root:Round 46's server1 train acc:  21.41%, train loss: 2.0792
+INFO:root:After inference1: [0.39, 5.81, 94.38, 2.86, 50.65]
+INFO:root:Round 46's server  test  acc:  20.97%, test  loss: 2.0791
+INFO:root:After inference2: [0.39, 5.94, 94.74, 2.86, 50.84]
+INFO:root:Round 47's server1 train acc:  20.14%, train loss: 2.0900
+INFO:root:After inference1: [0.40, 5.94, 96.43, 2.92, 51.75]
+INFO:root:Round 47's server  test  acc:  19.98%, test  loss: 2.0916
+INFO:root:After inference2: [0.40, 6.06, 96.80, 2.92, 51.94]
+INFO:root:Round 48's server1 train acc:  18.40%, train loss: 2.0673
+INFO:root:After inference1: [0.40, 6.06, 98.49, 2.98, 52.85]
+INFO:root:Round 48's server  test  acc:  18.34%, test  loss: 2.0662
+INFO:root:After inference2: [0.41, 6.20, 98.86, 2.98, 53.04]
+INFO:root:Round 49's server1 train acc:  17.22%, train loss: 2.1222
+INFO:root:After inference1: [0.41, 6.20, 100.56, 3.04, 53.95]
+INFO:root:Round 49's server  test  acc:  16.74%, test  loss: 2.1206
+INFO:root:After inference2: [0.42, 6.32, 100.92, 3.04, 54.14]
+INFO:root:Round 50's server1 train acc:  19.50%, train loss: 2.1017
+INFO:root:After inference1: [0.42, 6.32, 102.62, 3.09, 55.05]
+INFO:root:Round 50's server  test  acc:  18.98%, test  loss: 2.1024
+INFO:root:After inference2: [0.42, 6.45, 102.99, 3.09, 55.24]
+INFO:root:Round 51's server1 train acc:  18.54%, train loss: 2.0697
+INFO:root:After inference1: [0.43, 6.45, 104.68, 3.15, 56.15]
+INFO:root:Round 51's server  test  acc:  18.37%, test  loss: 2.0723
+INFO:root:After inference2: [0.43, 6.58, 105.04, 3.15, 56.34]
+INFO:root:Round 52's server1 train acc:  22.85%, train loss: 2.0450
+INFO:root:After inference1: [0.44, 6.58, 106.73, 3.21, 57.25]
+INFO:root:Round 52's server  test  acc:  23.06%, test  loss: 2.0479
+INFO:root:After inference2: [0.44, 6.71, 107.09, 3.21, 57.44]
+INFO:root:Round 53's server1 train acc:  25.01%, train loss: 2.0287
+INFO:root:After inference1: [0.45, 6.71, 108.79, 3.27, 58.36]
+INFO:root:Round 53's server  test  acc:  25.01%, test  loss: 2.0285
+INFO:root:After inference2: [0.45, 6.84, 109.15, 3.27, 58.54]
+INFO:root:Round 54's server1 train acc:  16.26%, train loss: 2.0702
+INFO:root:After inference1: [0.46, 6.84, 110.86, 3.33, 59.46]
+INFO:root:Round 54's server  test  acc:  16.05%, test  loss: 2.0690
+INFO:root:After inference2: [0.46, 6.97, 111.22, 3.33, 59.65]
+INFO:root:Round 55's server1 train acc:  18.02%, train loss: 2.0269
+INFO:root:After inference1: [0.46, 6.97, 112.91, 3.39, 60.56]
+INFO:root:Round 55's server  test  acc:  17.83%, test  loss: 2.0260
+INFO:root:After inference2: [0.47, 7.10, 113.27, 3.39, 60.75]
+INFO:root:Round 56's server1 train acc:  21.55%, train loss: 2.0404
+INFO:root:After inference1: [0.47, 7.10, 114.97, 3.45, 61.66]
+INFO:root:Round 56's server  test  acc:  20.94%, test  loss: 2.0438
+INFO:root:After inference2: [0.48, 7.23, 115.34, 3.45, 61.85]
+INFO:root:Round 57's server1 train acc:  19.98%, train loss: 2.0545
+INFO:root:After inference1: [0.48, 7.23, 117.02, 3.51, 62.76]
+INFO:root:Round 57's server  test  acc:  19.69%, test  loss: 2.0522
+INFO:root:After inference2: [0.48, 7.35, 117.39, 3.51, 62.95]
+INFO:root:Round 58's server1 train acc:  17.47%, train loss: 2.0416
+INFO:root:After inference1: [0.49, 7.35, 119.06, 3.56, 63.86]
+INFO:root:Round 58's server  test  acc:  17.15%, test  loss: 2.0391
+INFO:root:After inference2: [0.49, 7.48, 119.42, 3.56, 64.05]
+INFO:root:Round 59's server1 train acc:  17.69%, train loss: 2.0079
+INFO:root:After inference1: [0.50, 7.48, 121.11, 3.62, 64.96]
+INFO:root:Round 59's server  test  acc:  17.32%, test  loss: 2.0076
+INFO:root:After inference2: [0.50, 7.61, 121.47, 3.62, 65.15]
+INFO:root:Round 60's server1 train acc:  18.03%, train loss: 2.0274
+INFO:root:After inference1: [0.51, 7.61, 123.18, 3.68, 66.06]
+INFO:root:Round 60's server  test  acc:  17.55%, test  loss: 2.0251
+INFO:root:After inference2: [0.51, 7.74, 123.54, 3.68, 66.25]
+INFO:root:Round 61's server1 train acc:  21.00%, train loss: 1.9841
+INFO:root:After inference1: [0.51, 7.74, 125.22, 3.74, 67.16]
+INFO:root:Round 61's server  test  acc:  20.73%, test  loss: 1.9848
+INFO:root:After inference2: [0.52, 7.87, 125.58, 3.74, 67.35]
+INFO:root:Round 62's server1 train acc:  21.15%, train loss: 2.0063
+INFO:root:After inference1: [0.52, 7.87, 127.26, 3.80, 68.26]
+INFO:root:Round 62's server  test  acc:  20.94%, test  loss: 2.0069
+INFO:root:After inference2: [0.53, 8.00, 127.62, 3.80, 68.45]
+INFO:root:Round 63's server1 train acc:  23.44%, train loss: 1.9752
+INFO:root:After inference1: [0.53, 8.00, 129.32, 3.86, 69.36]
+INFO:root:Round 63's server  test  acc:  22.89%, test  loss: 1.9743
+INFO:root:After inference2: [0.53, 8.13, 129.68, 3.86, 69.55]
+INFO:root:Round 64's server1 train acc:  24.26%, train loss: 1.9720
+INFO:root:After inference1: [0.54, 8.13, 131.38, 3.92, 70.46]
+INFO:root:Round 64's server  test  acc:  24.81%, test  loss: 1.9692
+INFO:root:After inference2: [0.54, 8.26, 131.75, 3.92, 70.65]
+INFO:root:Round 65's server1 train acc:  25.81%, train loss: 1.9536
+INFO:root:After inference1: [0.55, 8.26, 133.44, 3.98, 71.57]
+INFO:root:Round 65's server  test  acc:  25.70%, test  loss: 1.9510
+INFO:root:After inference2: [0.55, 8.39, 133.81, 3.98, 71.76]
+INFO:root:Round 66's server1 train acc:  19.81%, train loss: 1.9703
+INFO:root:After inference1: [0.56, 8.39, 135.49, 4.03, 72.67]
+INFO:root:Round 66's server  test  acc:  19.46%, test  loss: 1.9688
+INFO:root:After inference2: [0.56, 8.52, 135.85, 4.03, 72.86]
+INFO:root:Round 67's server1 train acc:  27.55%, train loss: 1.9805
+INFO:root:After inference1: [0.57, 8.52, 137.54, 4.09, 73.77]
+INFO:root:Round 67's server  test  acc:  27.53%, test  loss: 1.9766
+INFO:root:After inference2: [0.57, 8.65, 137.90, 4.09, 73.96]
+INFO:root:Round 68's server1 train acc:  23.60%, train loss: 1.9489
+INFO:root:After inference1: [0.57, 8.65, 139.61, 4.15, 74.87]
+INFO:root:Round 68's server  test  acc:  23.57%, test  loss: 1.9476
+INFO:root:After inference2: [0.58, 8.78, 139.97, 4.15, 75.06]
+INFO:root:Round 69's server1 train acc:  25.96%, train loss: 1.9463
+INFO:root:After inference1: [0.58, 8.78, 141.67, 4.21, 75.98]
+INFO:root:Round 69's server  test  acc:  26.26%, test  loss: 1.9433
+INFO:root:After inference2: [0.59, 8.90, 142.03, 4.21, 76.16]
+INFO:root:Round 70's server1 train acc:  25.93%, train loss: 1.9626
+INFO:root:After inference1: [0.59, 8.90, 143.72, 4.27, 77.08]
+INFO:root:Round 70's server  test  acc:  25.70%, test  loss: 1.9618
+INFO:root:After inference2: [0.59, 9.03, 144.09, 4.27, 77.26]
+INFO:root:Round 71's server1 train acc:  28.45%, train loss: 1.9373
+INFO:root:After inference1: [0.60, 9.03, 145.77, 4.33, 78.18]
+INFO:root:Round 71's server  test  acc:  28.66%, test  loss: 1.9334
+INFO:root:After inference2: [0.60, 9.16, 146.12, 4.33, 78.36]
+INFO:root:Round 72's server1 train acc:  30.50%, train loss: 1.9155
+INFO:root:After inference1: [0.61, 9.16, 147.82, 4.39, 79.28]
+INFO:root:Round 72's server  test  acc:  30.97%, test  loss: 1.9148
+INFO:root:After inference2: [0.61, 9.29, 148.18, 4.39, 79.46]
+INFO:root:Round 73's server1 train acc:  26.30%, train loss: 1.9681
+INFO:root:After inference1: [0.62, 9.29, 149.88, 4.44, 80.38]
+INFO:root:Round 73's server  test  acc:  26.21%, test  loss: 1.9646
+INFO:root:After inference2: [0.62, 9.42, 150.24, 4.44, 80.57]
+INFO:root:Round 74's server1 train acc:  30.02%, train loss: 1.9123
+INFO:root:After inference1: [0.62, 9.42, 151.93, 4.50, 81.48]
+INFO:root:Round 74's server  test  acc:  30.21%, test  loss: 1.9084
+INFO:root:After inference2: [0.63, 9.55, 152.29, 4.50, 81.67]
+INFO:root:Round 75's server1 train acc:  30.21%, train loss: 1.9066
+INFO:root:After inference1: [0.63, 9.55, 154.00, 4.56, 82.59]
+INFO:root:Round 75's server  test  acc:  30.16%, test  loss: 1.9029
+INFO:root:After inference2: [0.64, 9.68, 154.36, 4.56, 82.77]
+INFO:root:Round 76's server1 train acc:  27.69%, train loss: 1.9334
+INFO:root:After inference1: [0.64, 9.68, 156.06, 4.62, 83.69]
+INFO:root:Round 76's server  test  acc:  27.51%, test  loss: 1.9313
+INFO:root:After inference2: [0.64, 9.81, 156.42, 4.62, 83.88]
+INFO:root:Round 77's server1 train acc:  28.12%, train loss: 1.8812
+INFO:root:After inference1: [0.65, 9.81, 158.13, 4.68, 84.80]
+INFO:root:Round 77's server  test  acc:  28.26%, test  loss: 1.8782
+INFO:root:After inference2: [0.65, 9.94, 158.49, 4.68, 84.99]
+INFO:root:Round 78's server1 train acc:  29.94%, train loss: 1.9255
+INFO:root:After inference1: [0.66, 9.94, 160.19, 4.74, 85.90]
+INFO:root:Round 78's server  test  acc:  29.79%, test  loss: 1.9237
+INFO:root:After inference2: [0.66, 10.07, 160.55, 4.74, 86.09]
+INFO:root:Round 79's server1 train acc:  30.20%, train loss: 1.8977
+INFO:root:After inference1: [0.67, 10.07, 162.24, 4.80, 87.01]
+INFO:root:Round 79's server  test  acc:  30.35%, test  loss: 1.8927
+INFO:root:After inference2: [0.67, 10.20, 162.61, 4.80, 87.20]
+INFO:root:Round 80's server1 train acc:  28.49%, train loss: 1.8925
+INFO:root:After inference1: [0.68, 10.20, 164.30, 4.86, 88.11]
+INFO:root:Round 80's server  test  acc:  28.61%, test  loss: 1.8865
+INFO:root:After inference2: [0.68, 10.33, 164.66, 4.86, 88.30]
+INFO:root:Round 81's server1 train acc:  29.34%, train loss: 1.8820
+INFO:root:After inference1: [0.68, 10.33, 166.37, 4.92, 89.22]
+INFO:root:Round 81's server  test  acc:  29.48%, test  loss: 1.8771
+INFO:root:After inference2: [0.69, 10.45, 166.73, 4.92, 89.41]
+INFO:root:Round 82's server1 train acc:  27.13%, train loss: 1.9185
+INFO:root:After inference1: [0.69, 10.45, 168.42, 4.97, 90.32]
+INFO:root:Round 82's server  test  acc:  27.31%, test  loss: 1.9132
+INFO:root:After inference2: [0.70, 10.58, 168.77, 4.97, 90.51]
+INFO:root:Round 83's server1 train acc:  26.80%, train loss: 1.9070
+INFO:root:After inference1: [0.70, 10.58, 170.47, 5.03, 91.42]
+INFO:root:Round 83's server  test  acc:  26.70%, test  loss: 1.9001
+INFO:root:After inference2: [0.70, 10.71, 170.83, 5.03, 91.61]
+INFO:root:Round 84's server1 train acc:  29.37%, train loss: 1.8717
+INFO:root:After inference1: [0.71, 10.71, 172.51, 5.09, 92.52]
+INFO:root:Round 84's server  test  acc:  29.80%, test  loss: 1.8683
+INFO:root:After inference2: [0.71, 10.84, 172.88, 5.09, 92.71]
+INFO:root:Round 85's server1 train acc:  28.00%, train loss: 1.8927
+INFO:root:After inference1: [0.72, 10.84, 174.57, 5.15, 93.62]
+INFO:root:Round 85's server  test  acc:  28.12%, test  loss: 1.8903
+INFO:root:After inference2: [0.72, 10.97, 174.93, 5.15, 93.81]
+INFO:root:Round 86's server1 train acc:  26.46%, train loss: 1.8767
+INFO:root:After inference1: [0.73, 10.97, 176.63, 5.21, 94.73]
+INFO:root:Round 86's server  test  acc:  26.68%, test  loss: 1.8697
+INFO:root:After inference2: [0.73, 11.09, 176.99, 5.21, 94.91]
+INFO:root:Round 87's server1 train acc:  28.75%, train loss: 1.8929
+INFO:root:After inference1: [0.73, 11.09, 178.70, 5.27, 95.83]
+INFO:root:Round 87's server  test  acc:  28.71%, test  loss: 1.8928
+INFO:root:After inference2: [0.74, 11.22, 179.06, 5.27, 96.02]
+INFO:root:Round 88's server1 train acc:  29.42%, train loss: 1.8501
+INFO:root:After inference1: [0.74, 11.22, 180.75, 5.33, 96.93]
+INFO:root:Round 88's server  test  acc:  29.72%, test  loss: 1.8453
+INFO:root:After inference2: [0.75, 11.35, 181.11, 5.33, 97.12]
+INFO:root:Round 89's server1 train acc:  30.85%, train loss: 1.8563
+INFO:root:After inference1: [0.75, 11.35, 182.80, 5.39, 98.03]
+INFO:root:Round 89's server  test  acc:  31.06%, test  loss: 1.8518
+INFO:root:After inference2: [0.75, 11.48, 183.15, 5.39, 98.22]
+INFO:root:Round 90's server1 train acc:  30.85%, train loss: 1.8495
+INFO:root:After inference1: [0.76, 11.48, 184.85, 5.44, 99.14]
+INFO:root:Round 90's server  test  acc:  31.17%, test  loss: 1.8461
+INFO:root:After inference2: [0.76, 11.61, 185.21, 5.44, 99.32]
+INFO:root:Round 91's server1 train acc:  30.58%, train loss: 1.8621
+INFO:root:After inference1: [0.77, 11.61, 186.90, 5.50, 100.24]
+INFO:root:Round 91's server  test  acc:  31.05%, test  loss: 1.8622
+INFO:root:After inference2: [0.77, 11.74, 187.26, 5.50, 100.43]
+INFO:root:Round 92's server1 train acc:  28.36%, train loss: 1.8709
+INFO:root:After inference1: [0.78, 11.74, 188.95, 5.56, 101.34]
+INFO:root:Round 92's server  test  acc:  28.43%, test  loss: 1.8638
+INFO:root:After inference2: [0.78, 11.87, 189.31, 5.56, 101.53]
+INFO:root:Round 93's server1 train acc:  31.35%, train loss: 1.8660
+INFO:root:After inference1: [0.78, 11.87, 191.01, 5.62, 102.45]
+INFO:root:Round 93's server  test  acc:  31.31%, test  loss: 1.8646
+INFO:root:After inference2: [0.79, 12.00, 191.37, 5.62, 102.64]
+INFO:root:Round 94's server1 train acc:  29.95%, train loss: 1.8795
+INFO:root:After inference1: [0.79, 12.00, 193.06, 5.68, 103.55]
+INFO:root:Round 94's server  test  acc:  30.02%, test  loss: 1.8734
+INFO:root:After inference2: [0.80, 12.12, 193.42, 5.68, 103.74]
+INFO:root:Round 95's server1 train acc:  30.31%, train loss: 1.8382
+INFO:root:After inference1: [0.80, 12.12, 195.12, 5.74, 104.66]
+INFO:root:Round 95's server  test  acc:  30.71%, test  loss: 1.8368
+INFO:root:After inference2: [0.80, 12.25, 195.48, 5.74, 104.85]
+INFO:root:Round 96's server1 train acc:  30.44%, train loss: 1.8371
+INFO:root:After inference1: [0.81, 12.25, 197.18, 5.80, 105.76]
+INFO:root:Round 96's server  test  acc:  30.62%, test  loss: 1.8331
+INFO:root:After inference2: [0.81, 12.38, 197.54, 5.80, 105.95]
+INFO:root:Round 97's server1 train acc:  31.48%, train loss: 1.8266
+INFO:root:After inference1: [0.82, 12.38, 199.23, 5.86, 106.87]
+INFO:root:Round 97's server  test  acc:  31.60%, test  loss: 1.8235
+INFO:root:After inference2: [0.82, 12.51, 199.59, 5.86, 107.05]
+INFO:root:Round 98's server1 train acc:  31.02%, train loss: 1.8163
+INFO:root:After inference1: [0.83, 12.51, 201.28, 5.91, 107.97]
+INFO:root:Round 98's server  test  acc:  31.32%, test  loss: 1.8130
+INFO:root:After inference2: [0.83, 12.64, 201.64, 5.91, 108.16]
+INFO:root:Round 99's server1 train acc:  28.17%, train loss: 1.8617
+INFO:root:After inference1: [0.84, 12.64, 203.34, 5.97, 109.07]
+INFO:root:Round 99's server  test  acc:  28.53%, test  loss: 1.8570
+INFO:root:After inference2: [0.84, 12.77, 203.69, 5.97, 109.26]
+INFO:root:Round 100's server1 train acc:  30.80%, train loss: 1.8288
+INFO:root:After inference1: [0.84, 12.77, 205.38, 6.03, 110.17]
+INFO:root:Round 100's server  test  acc:  31.11%, test  loss: 1.8246
+INFO:root:After inference2: [0.85, 12.90, 205.73, 6.03, 110.35]
+INFO:root:Record Time: |0.03| 0.00| 3.56| 6.03| 0.51| 0.00| 166.02| 91.65| 0.31| 12.90| 36.15| 18.70| = 335.86
+INFO:root:Total Training Time 356.48; Other Time 20.62
